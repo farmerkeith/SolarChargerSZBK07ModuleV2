@@ -19,8 +19,7 @@
 
 // global constants
 const unsigned int start_margin = 5000; // mV margin of solar above battery
-const unsigned int bat_float = 14600;   // mV float voltage
-//const unsigned int bat_float = 12600;   // mV float voltage
+const unsigned int bat_float = 12600;   // mV float voltage
 const unsigned int bat_current_limit = 10000; // mA
 
 // global variables
