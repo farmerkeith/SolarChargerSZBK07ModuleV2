@@ -625,4 +625,7 @@ Wire Wire Line
 	5975 1350 6950 1350
 Wire Wire Line
 	5450 1350 1750 1350
+Wire Wire Line
+	6950 1350 7450 1350
+Connection ~ 6950 1350
 $EndSCHEMATC
