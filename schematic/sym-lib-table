@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name pspice)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/pspice.lib)(options "")(descr ""))
+  (lib (name Modules)(type Legacy)(uri /home/guy/aProjects/KiCAD/lib_sch/Modules.lib)(options "")(descr ""))
+  (lib (name NGspice)(type Legacy)(uri /home/guy/aProjects/KiCAD/lib_sch/NGspice.lib)(options "")(descr ""))
+  (lib (name SZBK07-rescue)(type Legacy)(uri ${KIPRJMOD}/SZBK07-rescue.lib)(options "")(descr ""))
+)

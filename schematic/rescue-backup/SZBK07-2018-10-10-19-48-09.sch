@@ -1,6 +1,39 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:Modules
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:SZBK07-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +48,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Modules:SZBK07_DC-DC_module U1
+L SZBK07_DC-DC_module U1
 U 1 1 5B485D2D
 P 3950 3250
 F 0 "U1" H 3850 3360 60  0000 C CNN
@@ -26,7 +59,7 @@ F 3 "" H 3950 3200 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDPWR #PWR2
+L GNDPWR #PWR2
 U 1 1 5B485E0B
 P 2400 2650
 F 0 "#PWR2" H 2400 2450 50  0001 C CNN
@@ -37,7 +70,7 @@ F 3 "" H 2400 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Solar_Cells SC1
+L Solar_Cells SC1
 U 1 1 5B485E23
 P 1250 3200
 F 0 "SC1" H 1350 3300 50  0000 L CNN
@@ -50,7 +83,7 @@ $EndComp
 Text GLabel 1250 2900 0    60   Input ~ 0
 Vpp
 $Comp
-L Modules:IRFZ44N Q3
+L IRFZ44N Q3
 U 1 1 5B485EB4
 P 6550 2700
 F 0 "Q3" V 6400 2700 50  0000 L CNN
@@ -65,7 +98,7 @@ Wire Wire Line
 Wire Wire Line
 	5975 2800 6350 2800
 $Comp
-L Device:Battery BT1
+L Battery BT1
 U 1 1 5B485F93
 P 8850 3100
 F 0 "BT1" H 8950 3200 50  0000 L CNN
@@ -76,7 +109,7 @@ F 3 "" V 8850 3160 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDPWR #PWR3
+L GNDPWR #PWR3
 U 1 1 5B485FBA
 P 8850 3300
 F 0 "#PWR3" H 8850 3100 50  0001 C CNN
@@ -99,7 +132,7 @@ Wire Wire Line
 Wire Wire Line
 	6650 1750 6650 2300
 $Comp
-L Device:R R2
+L R R2
 U 1 1 5B4865B4
 P 5975 1500
 F 0 "R2" V 6055 1500 50  0000 C CNN
@@ -114,7 +147,7 @@ Wire Wire Line
 Wire Wire Line
 	5975 1750 5975 2025
 $Comp
-L Device:R R3
+L R R3
 U 1 1 5B48662F
 P 6950 1500
 F 0 "R3" V 7030 1500 50  0000 C CNN
@@ -128,8 +161,12 @@ Wire Wire Line
 	6950 1650 6950 1750
 Wire Wire Line
 	6950 1750 6950 2025
+Wire Wire Line
+	5800 1350 6950 1350
+Wire Wire Line
+	6950 1350 7450 1350
 $Comp
-L Device:D_Zener_ALT D1
+L D_Zener_ALT D1
 U 1 1 5B4866B2
 P 7450 2400
 F 0 "D1" H 7450 2500 50  0000 C CNN
@@ -141,10 +178,13 @@ F 3 "" H 7450 2400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7450 1350 7450 2250
+Connection ~ 6950 1350
+Wire Wire Line
+	5800 1350 1750 1350
 Wire Wire Line
 	1750 1350 1750 2900
 $Comp
-L Modules:AD822A U2
+L AD822A U2
 U 1 1 5B48809D
 P 3800 4200
 F 0 "U2" H 3800 4400 50  0000 L CNN
@@ -155,7 +195,7 @@ F 3 "" H 3800 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR1
+L GND #PWR1
 U 1 1 5B488158
 P 2050 2650
 F 0 "#PWR1" H 2050 2400 50  0001 C CNN
@@ -166,7 +206,7 @@ F 3 "" H 2050 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR5
+L GND #PWR5
 U 1 1 5B4881AE
 P 3700 4650
 F 0 "#PWR5" H 3700 4400 50  0001 C CNN
@@ -185,7 +225,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 4100 3500 4100
 $Comp
-L Device:R R7
+L R R7
 U 1 1 5B48878B
 P 3200 4150
 F 0 "R7" V 3280 4150 50  0000 C CNN
@@ -202,7 +242,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 4500 3700 4650
 $Comp
-L Device:R R8
+L R R8
 U 1 1 5B48887F
 P 4400 4450
 F 0 "R8" V 4480 4450 50  0000 C CNN
@@ -220,10 +260,11 @@ Wire Wire Line
 	4400 4600 4400 4950
 Wire Wire Line
 	4400 4950 3200 4950
+Connection ~ 3200 4300
 Text GLabel 4400 4200 2    60   Input ~ 0
 ArduinoPin_A1
 $Comp
-L Device:R R5
+L R R5
 U 1 1 5B488988
 P 2200 4100
 F 0 "R5" V 2280 4100 50  0000 C CNN
@@ -234,7 +275,7 @@ F 3 "" H 2200 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R9
+L R R9
 U 1 1 5B4889C5
 P 2500 4650
 F 0 "R9" V 2580 4650 50  0000 C CNN
@@ -245,7 +286,7 @@ F 3 "" H 2500 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR6
+L GND #PWR6
 U 1 1 5B488A20
 P 2500 4900
 F 0 "#PWR6" H 2500 4650 50  0001 C CNN
@@ -262,11 +303,11 @@ Wire Wire Line
 Text GLabel 2000 4400 0    60   Input ~ 0
 ArduinoPin_A0
 $Comp
-L Device:C C1
+L C C1
 U 1 1 5B488DB5
 P 2200 4550
 F 0 "C1" H 2225 4650 50  0000 L CNN
-F 1 "0.1uF" H 2225 4450 50  0000 L CNN
+F 1 "C" H 2225 4450 50  0000 L CNN
 F 2 "" H 2238 4400 50  0001 C CNN
 F 3 "" H 2200 4550 50  0001 C CNN
 	1    2200 4550
@@ -282,7 +323,7 @@ Wire Wire Line
 	2200 4900 2500 4900
 Connection ~ 2200 4400
 $Comp
-L Device:R R6
+L R R6
 U 1 1 5B489033
 P 5950 4200
 F 0 "R6" V 6030 4200 50  0000 C CNN
@@ -293,7 +334,7 @@ F 3 "" H 5950 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R10
+L R R10
 U 1 1 5B489039
 P 5950 4650
 F 0 "R10" V 6030 4650 50  0000 C CNN
@@ -304,7 +345,7 @@ F 3 "" H 5950 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR7
+L GND #PWR7
 U 1 1 5B48903F
 P 5950 4900
 F 0 "#PWR7" H 5950 4650 50  0001 C CNN
@@ -323,7 +364,7 @@ Wire Wire Line
 Text GLabel 5350 4400 0    60   Input ~ 0
 ArduinoPin_A2
 $Comp
-L Device:C C2
+L C C2
 U 1 1 5B489048
 P 5650 4550
 F 0 "C2" H 5675 4650 50  0000 L CNN
@@ -333,13 +374,18 @@ F 3 "" H 5650 4550 50  0001 C CNN
 	1    5650 4550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5350 4400 5650 4400
+Wire Wire Line
+	5650 4400 5950 4400
 Connection ~ 5950 4400
 Wire Wire Line
 	5650 4700 5650 4900
 Wire Wire Line
 	5650 4900 5950 4900
+Connection ~ 5650 4400
 $Comp
-L Device:D_ALT D4
+L D_ALT D4
 U 1 1 5B48ABB8
 P 5000 3750
 F 0 "D4" H 5000 3850 50  0000 C CNN
@@ -350,7 +396,7 @@ F 3 "" H 5000 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R4
+L R R4
 U 1 1 5B48ACD1
 P 4750 3900
 F 0 "R4" V 4830 3900 50  0000 C CNN
@@ -365,7 +411,7 @@ ArduinoPin_D9
 Wire Wire Line
 	7450 2800 7450 2550
 $Comp
-L Modules:MP2307_DC-DC_module U3
+L MP2307_DC-DC_module U3
 U 1 1 5B48BDD1
 P 2500 6000
 F 0 "U3" H 2400 6110 60  0000 C CNN
@@ -380,7 +426,7 @@ Vbb
 Text GLabel 3300 5600 2    60   Input ~ 0
 +7V
 $Comp
-L power:GND #PWR10
+L GND #PWR10
 U 1 1 5B48C726
 P 1500 5900
 F 0 "#PWR10" H 1500 5650 50  0001 C CNN
@@ -391,7 +437,7 @@ F 3 "" H 1500 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR11
+L GND #PWR11
 U 1 1 5B48C76A
 P 3300 5900
 F 0 "#PWR11" H 3300 5650 50  0001 C CNN
@@ -402,7 +448,7 @@ F 3 "" H 3300 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Modules:ArduinoNano U4
+L ArduinoNano U4
 U 1 1 5B48C7AE
 P 4400 6150
 F 0 "U4" H 4525 6050 50  0000 C CNN
@@ -431,7 +477,7 @@ Wire Wire Line
 Text GLabel 5750 5750 2    60   Input ~ 0
 +5V
 $Comp
-L power:GND #PWR9
+L GND #PWR9
 U 1 1 5B48CCA3
 P 3700 5750
 F 0 "#PWR9" H 3700 5500 50  0001 C CNN
@@ -442,7 +488,7 @@ F 3 "" H 3700 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR8
+L GND #PWR8
 U 1 1 5B48CCF9
 P 5150 5550
 F 0 "#PWR8" H 5150 5300 50  0001 C CNN
@@ -534,7 +580,7 @@ Wire Wire Line
 Wire Wire Line
 	2650 2800 2650 2650
 $Comp
-L power:GND #PWR4
+L GND #PWR4
 U 1 1 5B494DA1
 P 3350 4100
 F 0 "#PWR4" H 3350 3850 50  0001 C CNN
@@ -580,7 +626,7 @@ Wire Notes Line
 Text Notes 8450 2550 0    60   ~ 0
 12V BATTERY\nFLA, AGM OR Lithium
 $Comp
-L Modules:2N7000 Q2
+L 2N7000 Q2
 U 1 1 5B5C69A6
 P 6850 2225
 F 0 "Q2" H 7050 2300 50  0000 L CNN
@@ -591,7 +637,7 @@ F 3 "" H 6850 2225 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Modules:2N7000 Q1
+L 2N7000 Q1
 U 1 1 5B5C6A55
 P 6075 2225
 F 0 "Q1" H 6275 2300 50  0000 L CNN
@@ -605,8 +651,4 @@ Connection ~ 6950 1750
 Wire Wire Line
 	6650 2300 6275 2300
 Connection ~ 5975 1750
-Wire Wire Line
-	1750 1350 7450 1350
-Wire Wire Line
-	5350 4400 5950 4400
 $EndSCHEMATC
