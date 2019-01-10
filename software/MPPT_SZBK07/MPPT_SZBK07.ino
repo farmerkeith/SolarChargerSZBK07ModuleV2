@@ -1,8 +1,9 @@
 // MPPT software for a solar charger using a SZBK07 DC-DC converter
 // and a MOSFET diode
 // The MPPT functions are performed by a class defined in MPPT_SZBK07.h
+// software runs on Arduino Nano and processors in the ATmega328 family
 // Software written by farmerkeith
-// last update 14 July 2018
+// last update 10 January 2019
 
 //-----------------------------------------------------------------------------------------------------------------
 //////// Arduino pins Connections//////////////////////////////////////////////////////////////////////////////////
@@ -14,8 +15,8 @@
 
 // D9 - DC converter control
 
-#include "MPPT_SZBK07.h"
-#include "repeatEvery.h"
+#include "MPPT_SZBK07.h" // tab file included with this file
+#include "repeatEvery.h" // available for download from https://github.com/farmerkeith/executionControl
 
 // global constants
 const unsigned int start_margin = 5000; // mV margin of solar above battery
