@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:SZBK07-cache
+LIBS:SZBK07_18-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -557,7 +557,7 @@ Wire Notes Line
 Wire Notes Line
 	1600 2500 650  2500
 Text Notes 750  2450 0    60   ~ 0
-SOLAR PANEL\n0 TO 40v
+SOLAR PANEL\n0 TO 25v
 Wire Notes Line
 	8350 2600 8350 3500
 Wire Notes Line
@@ -625,4 +625,9 @@ Wire Wire Line
 	5975 1350 6950 1350
 Wire Wire Line
 	5450 1350 1750 1350
+Wire Wire Line
+	6950 1350 7450 1350
+Connection ~ 6950 1350
+Text Notes 1050 1050 0    60   ~ 0
+This circuit is intended for use with a 36-cell solar panel (MPP voltage of 18V).
 $EndSCHEMATC

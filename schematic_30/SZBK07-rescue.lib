@@ -1,0 +1,20 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# MP2307_DC-DC_module-Modules
+#
+DEF MP2307_DC-DC_module-Modules U 0 40 Y Y 1 F N
+F0 "U" -100 110 60 H V C CNN
+F1 "MP2307_DC-DC_module-Modules" -110 260 60 H V C CNN
+F2 "" 0 -50 60 H I C CNN
+F3 "" 0 -50 60 H I C CNN
+DRAW
+S -800 550 600 -40 0 1 0 N
+X IN+ 1 -1000 400 200 R 50 50 1 1 I
+X IN- 2 -1000 100 200 R 50 50 1 1 I
+X OUT- 3 800 100 200 L 50 50 1 1 I
+X OUT+ 4 800 400 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

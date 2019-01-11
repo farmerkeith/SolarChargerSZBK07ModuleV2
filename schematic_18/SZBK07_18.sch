@@ -1,15 +1,15 @@
 EESchema Schematic File Version 4
-LIBS:SZBK07-cache
+LIBS:SZBK07_18-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Solar Charger based on a SZBK01 module"
-Date "2018-07-14"
+Title "Solar Charger based on a SZBK07 module"
+Date "2019-01-11"
 Rev ""
 Comp "farmerkeith"
-Comment1 ""
+Comment1 "Suitable for 36-cell solar panel (MPP at 18V)"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -50,99 +50,49 @@ $EndComp
 Text GLabel 1250 2900 0    60   Input ~ 0
 Vpp
 $Comp
-L Modules:IRFZ44N Q3
-U 1 1 5B485EB4
-P 6550 2700
-F 0 "Q3" V 6400 2700 50  0000 L CNN
-F 1 "PSMN3R3-80PS" V 6750 2350 50  0000 L CNN
-F 2 "TO-220" H 6750 2625 50  0001 L CIN
-F 3 "" H 6550 2700 50  0001 L CNN
-	1    6550 2700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4750 2800 5975 2800
-Wire Wire Line
-	5975 2800 6350 2800
-$Comp
 L Device:Battery BT1
 U 1 1 5B485F93
-P 8850 3100
-F 0 "BT1" H 8950 3200 50  0000 L CNN
-F 1 "Battery" H 8950 3100 50  0000 L CNN
-F 2 "" V 8850 3160 50  0001 C CNN
-F 3 "" V 8850 3160 50  0001 C CNN
-	1    8850 3100
+P 10300 3100
+F 0 "BT1" H 10400 3200 50  0000 L CNN
+F 1 "Battery" H 10400 3100 50  0000 L CNN
+F 2 "" V 10300 3160 50  0001 C CNN
+F 3 "" V 10300 3160 50  0001 C CNN
+	1    10300 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDPWR #PWR03
 U 1 1 5B485FBA
-P 8850 3300
-F 0 "#PWR03" H 8850 3100 50  0001 C CNN
-F 1 "GNDPWR" H 8850 3170 50  0000 C CNN
-F 2 "" H 8850 3250 50  0001 C CNN
-F 3 "" H 8850 3250 50  0001 C CNN
-	1    8850 3300
+P 10300 3300
+F 0 "#PWR03" H 10300 3100 50  0001 C CNN
+F 1 "GNDPWR" H 10300 3170 50  0000 C CNN
+F 2 "" H 10300 3250 50  0001 C CNN
+F 3 "" H 10300 3250 50  0001 C CNN
+	1    10300 3300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5975 2800 5975 2425
-Wire Wire Line
-	6950 2425 6950 2800
-Wire Wire Line
-	5975 1750 6450 1750
-Wire Wire Line
-	6450 1750 6450 2500
-Wire Wire Line
-	6950 1750 6650 1750
-Wire Wire Line
-	6650 1750 6650 2300
 $Comp
 L Device:R R2
 U 1 1 5B4865B4
-P 5975 1500
-F 0 "R2" V 6055 1500 50  0000 C CNN
-F 1 "100K" V 5975 1500 50  0000 C CNN
-F 2 "" V 5905 1500 50  0001 C CNN
-F 3 "" H 5975 1500 50  0001 C CNN
-	1    5975 1500
+P 7900 3700
+F 0 "R2" V 7980 3700 50  0000 C CNN
+F 1 "100K" V 7900 3700 50  0000 C CNN
+F 2 "" V 7830 3700 50  0001 C CNN
+F 3 "" H 7900 3700 50  0001 C CNN
+	1    7900 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5975 1650 5975 1750
-Wire Wire Line
-	5975 1750 5975 2025
 $Comp
 L Device:R R3
 U 1 1 5B48662F
-P 6950 1500
-F 0 "R3" V 7030 1500 50  0000 C CNN
-F 1 "100K" V 6950 1500 50  0000 C CNN
-F 2 "" V 6880 1500 50  0001 C CNN
-F 3 "" H 6950 1500 50  0001 C CNN
-	1    6950 1500
+P 8800 3700
+F 0 "R3" V 8900 3700 50  0000 C CNN
+F 1 "100K" V 8800 3700 50  0000 C CNN
+F 2 "" V 8730 3700 50  0001 C CNN
+F 3 "" H 8800 3700 50  0001 C CNN
+	1    8800 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6950 1650 6950 1750
-Wire Wire Line
-	6950 1750 6950 2025
-$Comp
-L Device:D_Zener_ALT D1
-U 1 1 5B4866B2
-P 7450 2400
-F 0 "D1" H 7450 2500 50  0000 C CNN
-F 1 "1N4742" H 7450 2300 50  0000 C CNN
-F 2 "" H 7450 2400 50  0001 C CNN
-F 3 "" H 7450 2400 50  0001 C CNN
-	1    7450 2400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7450 1350 7450 2250
-Wire Wire Line
-	1750 1350 1750 2900
 $Comp
 L Modules:AD822A U2
 U 1 1 5B48809D
@@ -176,7 +126,7 @@ F 3 "" H 3700 4650 50  0001 C CNN
 	1    3700 4650
 	1    0    0    -1  
 $EndComp
-Text GLabel 8850 2800 2    60   Input ~ 0
+Text GLabel 10300 2800 2    60   Input ~ 0
 Vbb
 Text GLabel 3700 3800 0    60   Input ~ 0
 +5V
@@ -362,8 +312,6 @@ F 3 "" H 4750 3900 50  0001 C CNN
 $EndComp
 Text GLabel 4600 3900 0    60   Input ~ 0
 ArduinoPin_D9
-Wire Wire Line
-	7450 2800 7450 2550
 Text GLabel 1850 5600 0    60   Input ~ 0
 Vbb
 Text GLabel 2850 5600 2    60   Input ~ 0
@@ -445,22 +393,6 @@ Wire Wire Line
 	4900 5750 5750 5750
 Wire Wire Line
 	3900 5750 3700 5750
-Connection ~ 5975 2800
-Wire Wire Line
-	6750 2800 6950 2800
-Wire Wire Line
-	6950 2800 7450 2800
-Wire Wire Line
-	7450 2800 8100 2800
-Wire Wire Line
-	8100 2800 8850 2800
-Connection ~ 6950 2800
-Connection ~ 7450 2800
-Wire Wire Line
-	5950 4050 8100 4050
-Wire Wire Line
-	8100 4050 8100 2800
-Connection ~ 8100 2800
 Wire Wire Line
 	4900 3900 5000 3900
 Wire Wire Line
@@ -476,17 +408,17 @@ Wire Notes Line
 Wire Notes Line
 	4850 2600 2800 2600
 Wire Notes Line
-	5450 1200 5450 3000
+	7250 2350 7250 4150
 Wire Notes Line
-	5450 3000 7650 3000
+	7250 4150 9450 4150
 Wire Notes Line
-	7650 3000 7650 1200
+	9450 4150 9450 2350
 Wire Notes Line
-	7650 1200 5450 1200
+	9450 2350 7250 2350
 Wire Wire Line
 	1250 3000 1250 2900
 Wire Wire Line
-	8850 2800 8850 2900
+	10300 2800 10300 2900
 Wire Notes Line
 	1200 3600 1200 7000
 Wire Notes Line
@@ -497,7 +429,7 @@ Wire Notes Line
 	6550 3600 1200 3600
 Text Notes 3350 2600 0    60   ~ 0
 POWER MODULE
-Text Notes 5950 1150 0    60   ~ 0
+Text Notes 8250 2250 0    60   ~ 0
 MOSFET DIODE
 Text Notes 1250 7000 0    60   ~ 0
 MEASUREMENT AND CONTROL 
@@ -512,12 +444,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 2900 5000 3100
 Wire Wire Line
-	1250 2900 1750 2900
-Wire Wire Line
-	1750 2900 2200 2900
-Wire Wire Line
 	2200 2900 2950 2900
-Connection ~ 1750 2900
 Wire Wire Line
 	2950 2800 2650 2800
 Wire Wire Line
@@ -557,43 +484,17 @@ Wire Notes Line
 Wire Notes Line
 	1600 2500 650  2500
 Text Notes 750  2450 0    60   ~ 0
-SOLAR PANEL\n0 TO 40v
+SOLAR PANEL\n0 TO 25v
 Wire Notes Line
-	8350 2600 8350 3500
+	9800 2600 9800 3500
 Wire Notes Line
-	8350 3500 9200 3500
+	9800 3500 10650 3500
 Wire Notes Line
-	9200 3500 9200 2600
+	10650 3500 10650 2600
 Wire Notes Line
-	9200 2600 8350 2600
-Text Notes 8450 2550 0    60   ~ 0
+	10650 2600 9800 2600
+Text Notes 9900 2550 0    60   ~ 0
 12V BATTERY\nFLA, AGM OR Lithium
-$Comp
-L Modules:2N7000 Q2
-U 1 1 5B5C69A6
-P 6850 2225
-F 0 "Q2" H 7050 2300 50  0000 L CNN
-F 1 "2N7000" H 7050 2225 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 7050 2150 50  0001 L CIN
-F 3 "" H 6850 2225 50  0001 L CNN
-	1    6850 2225
-	1    0    0    -1  
-$EndComp
-$Comp
-L Modules:2N7000 Q1
-U 1 1 5B5C6A55
-P 6075 2225
-F 0 "Q1" H 6275 2300 50  0000 L CNN
-F 1 "2N7000" H 6275 2225 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 6275 2150 50  0001 L CIN
-F 3 "" H 6075 2225 50  0001 L CNN
-	1    6075 2225
-	-1   0    0    -1  
-$EndComp
-Connection ~ 6950 1750
-Wire Wire Line
-	6650 2300 6275 2300
-Connection ~ 5975 1750
 Wire Wire Line
 	5350 4400 5950 4400
 $Comp
@@ -607,25 +508,104 @@ F 3 "" H 2350 5950 60  0001 C CNN
 	1    2350 6000
 	1    0    0    -1  
 $EndComp
+Text Notes 1050 1050 0    60   ~ 0
+This circuit is intended for use with a 36-cell solar panel (MPP voltage of 18V).
+Wire Wire Line
+	1250 2900 2200 2900
 $Comp
-L Device:R R1
-U 1 1 5C31D36F
-P 5600 1350
-F 0 "R1" V 5500 1350 50  0000 C CNN
-F 1 "100K" V 5600 1350 50  0000 C CNN
-F 2 "" V 5530 1350 50  0001 C CNN
-F 3 "~" H 5600 1350 50  0001 C CNN
-	1    5600 1350
-	0    1    1    0   
+L Modules:IRF4905 Q?
+U 1 1 5C38A9FB
+P 8300 2900
+F 0 "Q?" V 8646 2900 50  0000 C CNN
+F 1 "IRF4905" V 8553 2900 50  0000 C CNN
+F 2 "TO-220" H 8500 2825 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 8300 2900 50  0001 L CNN
+	1    8300 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:2N3906 Q?
+U 1 1 5C395892
+P 8700 3300
+F 0 "Q?" H 8891 3347 50  0000 L CNN
+F 1 "2N3906" H 8891 3254 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8900 3225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 8700 3300 50  0001 L CNN
+	1    8700 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3906 Q?
+U 1 1 5C395913
+P 8000 3300
+F 0 "Q?" H 8191 3347 50  0000 L CNN
+F 1 "2N3906" H 8191 3254 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8200 3225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 8000 3300 50  0001 L CNN
+	1    8000 3300
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5750 1350 5975 1350
-Connection ~ 5975 1350
+	8800 3500 8800 3550
 Wire Wire Line
-	5975 1350 6950 1350
+	8500 3300 8200 3300
 Wire Wire Line
-	5450 1350 1750 1350
+	8400 3100 8400 3550
 Wire Wire Line
-	6950 1350 7450 1350
-Connection ~ 6950 1350
+	8400 3550 8800 3550
+Connection ~ 8800 3550
+Wire Wire Line
+	7900 3500 7900 3550
+Wire Wire Line
+	7900 3550 8200 3550
+Wire Wire Line
+	8200 3550 8200 3300
+Connection ~ 7900 3550
+Connection ~ 8200 3300
+Wire Wire Line
+	4750 2800 7900 2800
+Wire Wire Line
+	8500 2800 8800 2800
+$Comp
+L Device:D_ALT D?
+U 1 1 5C3A5AEF
+P 7900 2950
+F 0 "D?" V 7947 2871 50  0000 R CNN
+F 1 "D_ALT" V 7854 2871 50  0000 R CNN
+F 2 "" H 7900 2950 50  0001 C CNN
+F 3 "~" H 7900 2950 50  0001 C CNN
+	1    7900 2950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7900 2800
+Wire Wire Line
+	7900 2800 8100 2800
+$Comp
+L Device:D_ALT D?
+U 1 1 5C3A5BD6
+P 8800 2950
+F 0 "D?" V 8847 2871 50  0000 R CNN
+F 1 "D_ALT" V 8754 2871 50  0000 R CNN
+F 2 "" H 8800 2950 50  0001 C CNN
+F 3 "~" H 8800 2950 50  0001 C CNN
+	1    8800 2950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 8800 2800
+Wire Wire Line
+	8800 2800 10300 2800
+Wire Wire Line
+	7900 3850 8800 3850
+$Comp
+L power:GND #PWR?
+U 1 1 5C3AF037
+P 8800 3850
+F 0 "#PWR?" H 8800 3600 50  0001 C CNN
+F 1 "GND" H 8805 3674 50  0000 C CNN
+F 2 "" H 8800 3850 50  0001 C CNN
+F 3 "" H 8800 3850 50  0001 C CNN
+	1    8800 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 8800 3850
 $EndSCHEMATC
